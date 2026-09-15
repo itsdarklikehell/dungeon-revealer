@@ -25,8 +25,8 @@ import type {
   Request,
 } from "express-serve-static-core";
 
-type RequestWithRole = Request & { role: string | null };
-type ErrorWithStatus = Error & { status: number };
+export type RequestWithRole = Request & { role: string | null };
+export type ErrorWithStatus = Error & { status: number };
 
 export const bootstrapServer = async (env: ReturnType<typeof getEnv>) => {
   fs.mkdirpSync(env.DATA_DIRECTORY);
